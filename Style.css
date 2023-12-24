@@ -162,3 +162,11 @@ button:hover{
    
 }
 
+@media screen and (min-width: 769px) {
+            /* Hide the hamburger icon in desktop view */
+            .menu-toggle {
+                display: none;
+            }
+            /* Optionally, you can adjust other styles for desktop view here */
+        }
+
