@@ -10,11 +10,12 @@
     <div class="banner">
       <div class="navbar">
         <img src="/Images/logo.png" alt="" class="logo" />
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Blog</a></li>
           <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="https://wa.me/qr/BRLWGRPCCYCSP1 " target="_blank">Contact</a></li>
         </ul>
       </div>
 
@@ -32,5 +33,30 @@
         </div>
       </div>
     </div>
+
+    <script>
+      // JavaScript function to toggle the menu visibility
+      function toggleMenu() {
+          var menu = document.querySelector('.navbar ul');
+          var toggleButton = document.querySelector('.menu-toggle');
+          var logo = document.querySelector('.logo');
+
+          menu.classList.toggle('show');
+          toggleButton.classList.toggle('close');
+          logo.style.display = (menu.classList.contains('show')) ? 'none' : 'block';
+
+          // Add event listener to close the menu when clicking outside
+          document.addEventListener('click', function (event) {
+              var isClickInside = menu.contains(event.target) || toggleButton.contains(event.target);
+
+              if (!isClickInside) {
+                  menu.classList.remove('show');
+                  toggleButton.classList.remove('close');
+                  logo.style.display = 'block';
+              }
+          });
+      }
+  </script>
+
   </body>
 </html>

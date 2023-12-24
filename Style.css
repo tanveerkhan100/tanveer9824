@@ -125,3 +125,40 @@ button:hover{
         font-size: 14px;
     }
 }
+
+/* Your existing styles */
+
+/* Hamburger menu styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .navbar{
+        width: 95%;
+        padding: 20px 0;
+    }
+    .navbar ul {
+        display: none; /* Hide the list items by default */
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar ul.show {
+        display: flex; /* Show the list items when the "show" class is present */
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: white;
+        cursor: pointer;
+    }
+
+    .menu-toggle.close {
+        display: none;
+    }
+   
+}
+
